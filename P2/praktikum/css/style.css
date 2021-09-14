@@ -1,0 +1,28 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url('./../img/bunga1.jpg'), url('./../img/bunga2.jpg');
+    background-repeat: no-repeat, repeat;
+    color: white;
+}
+
+h2{
+    color: orange;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+}
+
+.kotak{
+    padding: 50px;
+    width: 100px;
+    color: #fff;
+    margin: 10px;
+    background-color: orange;
+}
+
+#kotak{
+    padding: 50px;
+    width: 400px;
+    color: #fff;
+    background-color: blue;
+}
