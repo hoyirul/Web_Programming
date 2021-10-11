@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Selector</title>
+  <script src="./../js/jquery-3.5.1.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("h2").hide();
+        $(".subjudul").hide();
+        $("#paragraf").hide();
+        $("#paragraf.dua").hide();
+        $("div p.paragraf").hide();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h2>SELEMAT DATANG DI WEB SAYA</h2>
+  <h3 class="subjudul">Nama saya adalah Mochammad Hairullah mahasiswa TI-2H</h3>
+  <p id="paragraf"> Saya tinggal di kota Bondowoso</p>
+  <p id="paragraf" class="dua"> Hobi saya adalah membaca</p>
+  <div>
+    <p class="paragraf">
+      Saya senang pemrograman web
+    </p>
+  </div>
+  <p> Paragraf ini akan selalu tampil</p>
+  <button> Klik Saya!</button>
+</body>
+
+</html>
