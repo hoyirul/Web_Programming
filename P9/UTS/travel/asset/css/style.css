@@ -1,0 +1,261 @@
+@font-face{
+	font-family: "Ancona-Light";
+	src:url(../fonts/Ancona-Light.ttf);
+}
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Ancona-Light';
+}
+.img-responsive{
+	width: 100%;
+}
+.img-gallery{
+	height: 300px;
+}
+.brand-img{
+	height: 60px;
+}
+.bg-gray{
+	background: #eee;
+}
+.bg-white{
+	background: #fff;
+}
+.bg-blue{
+	background: #60B9EB;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.center{
+	margin: 5px auto;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.text-center{
+	text-align: center;
+}
+.text-white{
+	color: #fff;
+}
+.text-gray{
+	color: #777;
+}
+.text-uppercase{
+	text-transform: uppercase;
+}
+.text-cap{
+	text-transform: capitalize;
+}
+.text-justify{
+	text-align: justify;
+}
+
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+}
+.fixed{
+	position: fixed;
+}
+.clear{
+	clear: both;
+}
+
+.triangle-top{
+	width: 0;
+	height: 0;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	border-bottom: 30px solid #fff;
+}
+.triangle-left{
+	width: 0;
+	height: 0;
+	border-top:15px solid transparent;
+	border-right: 30px solid #fff;
+	border-bottom: 15px solid transparent;
+}
+.triangle-right{
+	width: 0;
+	height: 0;
+	border-top:15px solid transparent;
+	border-left: 30px solid #fff;
+	border-bottom: 15px solid transparent;
+}
+.footer-menu > li{
+	padding: 12px 0;
+	list-style: none;
+}
+.center-left{
+	top: 45%;
+	left: -6.8%;
+}
+.center-right{
+	top: 45%;
+	right: -6.8%;
+}
+.center-top{
+	left: 45%;
+	top: -9.8%;
+}
+.container{
+	padding: 5% 5%;
+}
+.row{
+	padding: 2% 2%;
+}
+
+p{
+	line-height: 35px;
+	font-size: 15pt;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+}
+.bg-1{
+	background: url(../img/site/Patung-Sby1.jpg);
+	height: 400px;
+}
+.bg-2{
+	background: url(../img/site/pertanian.jpg);
+	height: 700px;
+}
+.paralax{	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+.btn{
+	padding: 12px;
+	border: none;
+	cursor: pointer;
+	font-size: 13pt;
+}
+.btn-bg{
+	padding: 3% 8%;
+}
+.btn-primary{
+	background: #60B9EB;
+	color: #fff;
+}
+a{
+	text-decoration: none;
+}
+/*slide*/
+header{
+	width: 100%;
+	z-index: 9;
+	height: 100px;
+	transition: .5s;
+}
+.navbar-style{
+	width: 100%;
+	z-index: 9;
+	height: 80px;
+	background:#ddd;
+}
+.navbar-style .menu li a{
+	color: #777;
+}
+.navbar-brand{
+	width: 20%;
+	padding: 15px;
+}
+.navbar-nav{
+	width: 78%;
+}
+.menu{
+	list-style-type: none;
+}
+.menu > li{
+	display: inline-block;
+	padding: 12px;
+}
+.menu a{
+	color: #fff;
+}
+.banner, .slides, .slide{
+	height: 740px;
+	width: 100%;
+}
+.content-slide{
+	position: absolute;
+	color: #fff;
+	top: 40%;
+	left: 30%;
+	z-index: 9;
+	text-align: center;
+	/* font-weight: bold; */
+
+}
+.slide{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 2s;
+}
+.slide.active{
+	opacity: 1;
+}
+.slide img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.black-overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.384);
+}
+.shadow{
+	box-shadow: 7px 4px 7px 4px rgba(0,0,0,.4)
+}
+.content-paralax{
+	left: 35%;
+	top: 18%;
+	font-size: 40px;
+}
+.content [class *='col-']{
+	padding: 0;
+}
+#overlow{
+	overflow: hidden;
+}
+.photo-wrapper img{
+	height: 200px;
+	transition: 1s;
+}
+.photo-wrapper:hover img{
+	transform: scale(1.7);
+}
+
+.box{
+	width: 50%;
+}
+.head-box{
+	padding: 5px;
+}
+form{
+	padding: 12px;
+	overflow: hidden;
+}
+input[type=text], input[type=email], input[type=password], input[type=date]{
+	padding: 12px;
+	border: 1px solid #ddd;
+	width: 100%;
+}
+::placeholder{
+	color: #777;
+}
