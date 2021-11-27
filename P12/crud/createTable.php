@@ -12,10 +12,10 @@
         echo "Koneksi  MySQL gagal".mysqli_connect_error();
     }
 
-    $query = "create table student(
+    $query = "create table user(
                 id int primary key auto_increment,
-                name varchar(30) not null,
-                address varchar(100)    
+                username varchar(20) not null,
+                password varchar(50) not null    
             );";
     if(mysqli_query($connect, $query)){
         echo "Tabel student berhasil di buat";

@@ -12,7 +12,7 @@
         echo "Koneksi  MySQL gagal".mysqli_connect_error();
     }
 
-    $query = "insert into student(name, address) values('Kevin', 'Malang'),('Stephanie', 'Surabaya'), ('Sammy', 'Jakarta')";
+    $query = "insert into student(username, password) values('admin', md5('123'))";
     if(mysqli_query($connect, $query)){
         echo "Data baru berhasil ditambahkan";
     }else{
