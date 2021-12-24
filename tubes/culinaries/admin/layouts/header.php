@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  require './../../app/config.php';
+
+  if(!$_SESSION['sess_id']){
+    header('location:./../../auth/auth.php');
+  }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -11,11 +19,9 @@
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./../assets/css/style.css">
 
-  <!-- Font Awesome JS -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body>
@@ -27,43 +33,30 @@
       </div>
 
       <ul class="list-unstyled components">
-        <p>Nama Kamu</p>
+        <p class="text-center"><?= $_SESSION['sess_name'] ?></p>
         <li>
-          <a href="#">Home</a>
+          <a href="./../home">Home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="./../culinaries">Posts</a>
         </li>
         <li>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-              <a href="#">Page 1</a>
-            </li>
-            <li>
-              <a href="#">Page 2</a>
-            </li>
-            <li>
-              <a href="#">Page 3</a>
-            </li>
-          </ul>
+          <a href="./../categories">Categories</a>
         </li>
         <li>
-          <a href="#">Portfolio</a>
+          <a href="./../cities">Cities</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="./../settings?uid=<?= $_SESSION['sess_id'] ?>">Settings</a>
         </li>
       </ul>
 
       <ul class="list-unstyled CTAs">
           <li>
-              <a href="#" class="download">Download source</a>
-          </li>
-          <li>
-              <a href="#" class="article">Back to article</a>
+              <a href="./../../app/auth/destroy.php" onclick="return confirm('Are you sure?')" class="download">Logout</a>
           </li>
       </ul>
+      
     </nav>
 
     <div id="content">
@@ -82,7 +75,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
+              <a class="nav-link" href="./../../app/auth/destroy.php" onclick="return confirm('Are your sure?')">Logout</a>
             </li>
           </ul>
         </div>

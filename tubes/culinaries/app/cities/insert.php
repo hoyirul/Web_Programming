@@ -1,18 +1,15 @@
 <?php
 
     require '../config.php';
-
-    $data = [
-        '', '$_POST[city]', date('Y-m-d H:i:s'), date('Y-m-d H:i:s')
-    ];
     
-    $query = 'insert into cities values("'. $data .'")';
+    
+    $query = "insert into cities values(null, '$_POST[city]', '$created_at', '$updated_at')";
     $sql = mysqli_query($conn, $query);
 
     if($sql){
-        echo "OK";
+        header('location:./../../admin/cities/index.php?msg=success');
     }else{
-        echo "Failed";
+        header('location:./../../admin/cities/index.php?msg=errors');
     }
 
 

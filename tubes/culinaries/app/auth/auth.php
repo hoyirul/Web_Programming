@@ -14,7 +14,7 @@
         $_SESSION['sess_name'] = $row['name'];
         $_SESSION['sess_user'] = $row['username'];
         $_SESSION['sess_token'] = $row['token'];
-        // header();
+        header('location:./../../admin/home');
     }else{
-        // header();
+        header('location:./../../auth/auth.php?errors=errors');
     }

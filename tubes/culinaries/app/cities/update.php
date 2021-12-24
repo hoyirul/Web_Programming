@@ -2,18 +2,15 @@
 
     require '../config.php';
 
-    $id = $_POST['category_id'];
-    $data = [
-        '$_POST[city]', date('Y-m-d H:i:s')
-    ];
+    $id = $_POST['id'];
     
-    $query = 'update cities set city="'. $data[0] .'", update_at="'. $data[1] .'" where city_id='.$id;
+    $query = "update cities set city='$_POST[city]', updated_at='$updated_at' WHERE city_id=$id";
     $sql = mysqli_query($conn, $query);
 
     if($sql){
-        echo "OK";
+        header('location:./../../admin/cities/index.php?msg=success');
     }else{
-        echo "Failed";
+        header('location:./../../admin/cities/index.php?msg=errors');
     }
 
 
